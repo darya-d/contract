@@ -1,0 +1,993 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head id="Head1">
+        <title>Приложение к Единому договору</title>
+        <style type="text/css" src="style.css"></style>
+    </head>
+    <body>
+        <br>
+        <style type="text/css">
+            @media print 
+            {       
+            .hiddenWhenPrint 
+            {
+            display: none;
+            }
+            }
+        </style>
+        <script src="./jquery-2.2.0.min.js" type="text/javascript"></script>
+        <script src="./scale.js" type="text/javascript"></script>
+        <div class="hiddenWhenPrint" style="margin:8px">
+            <span>Изменить шрифт*</span>
+            <button id="up">↑ A</button>
+            <button id="down">↓ A</button><br>
+            <span style="font-size:8pt">*не выводится на печать</span> <br>
+        </div>
+        <div id="PnMain">
+            <form name="form1" method="post" action="./ContractDoc.aspx?name=appADSL" id="form1" style="font-size: 12.9999pt;">
+                <div style="font-size: 13.4998pt;">
+                    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTA2NTgxODQ0Nw9kFgICBw9kFgICAQ9kFhZmD2QWAmYPZBYWAgEPZBYGAgUPDxYCHgdWaXNpYmxlZ2QWDAIBDw8WBh4ISW1hZ2VVcmwFRH4vVGVtcGxhdGVzL1VzZXJGdW5jdGlvbi9CYXJjb2RlSW1hZ2UuYXNoeD9Db250cmFjdG51bT0xNzAzMDE0MjgwOTAyHgVXaWR0aBsAAAAAAMBnQAEAAAAeBF8hU0ICgAJkZAIDDw8WAh4EVGV4dAVe0L7QsSDQvtC60LDQt9Cw0L3QuNC4INGD0YHQu9GD0LPQuCDCq9CU0L7RgdGC0YPQvyDQuiDRgdC10YLQuCDQmNC90YLQtdGA0L3QtdGCIChieWZseSnCuzxiciAvPmRkAgUPDxYCHwQFDTE3MDMwMTQyODA5MDJkZAIHDw8WAh8EBRkxMyDQuNGO0LvRjyAyMDE1INCz0L7QtNCwZGQCCw8PFgIfAQUQfi9pbWFnZXMvQkYxLmpwZ2RkAg0PDxYCHwEFS34vVGVtcGxhdGVzL1VzZXJGdW5jdGlvbi9RUkNvZGVDb250cmFjdEltYWdlLmFzaHg/Q29udHJhY3RudW09MTcwMzAxNDI4MDkwMmRkAgcPZBYEAg0PDxYCHwQFCzE3MDMwMTQyODA5ZGQCEw8PFgIfAQVCfi9UZW1wbGF0ZXMvVXNlckZ1bmN0aW9uL0JhcmNvZGVJbWFnZS5hc2h4P0NvbnRyYWN0bnVtPTE3MDMwMTQyODA5ZGQCDQ8PFgIfAGdkFgQCAQ8PFgIfBAULMTcwMzAxNDI4MDlkZAIDDw8WAh8EBRkxMyDQuNGO0LvRjyAyMDE1INCz0L7QtNCwZGQCAw8PFgIfAGhkFggCBQ8PFgIfAGhkFgoCAQ8PFgIfBAVe0L7QsSDQvtC60LDQt9Cw0L3QuNC4INGD0YHQu9GD0LPQuCDCq9CU0L7RgdGC0YPQvyDQuiDRgdC10YLQuCDQmNC90YLQtdGA0L3QtdGCIChieWZseSnCuzxiciAvPmRkAgMPDxYCHwQFDTE3MDMwMTQyODA5MDJkZAIFDw8WAh8EBRkxMyDQuNGO0LvRjyAyMDE1INCz0L7QtNCwZGQCCQ8PFgYfAQVEfi9UZW1wbGF0ZXMvVXNlckZ1bmN0aW9uL0JhcmNvZGVJbWFnZS5hc2h4P0NvbnRyYWN0bnVtPTE3MDMwMTQyODA5MDIfAhsAAAAAAMBnQAEAAAAfAwKAAmRkAgsPDxYCHwEFS34vVGVtcGxhdGVzL1VzZXJGdW5jdGlvbi9RUkNvZGVDb250cmFjdEltYWdlLmFzaHg/Q29udHJhY3RudW09MTcwMzAxNDI4MDkwMmRkAgcPZBYEAg0PDxYCHwQFCzE3MDMwMTQyODA5ZGQCEw8PFgIfAQVCfi9UZW1wbGF0ZXMvVXNlckZ1bmN0aW9uL0JhcmNvZGVJbWFnZS5hc2h4P0NvbnRyYWN0bnVtPTE3MDMwMTQyODA5ZGQCCw9kFh4CAQ8PFgQeCENzc0NsYXNzBQtoaWRkZW5maWVsZB8DAgJkZAIDDw8WBh8EZR8FBQx2aXNpYmxlZmllbGQfAwICZGQCBQ8PFgYfBQULaGlkZGVuZmllbGQfAwICHwBoZGQCBw8PFgQfBQULaGlkZGVuZmllbGQfAwICZGQCCQ8PFgYfBGUfBQUMdmlzaWJsZWZpZWxkHwMCAmRkAgsPDxYGHwUFC2hpZGRlbmZpZWxkHwMCAh8AaGRkAg8PDxYEHwUFC2hpZGRlbmZpZWxkHwMCAmRkAhEPDxYGHwRlHwUFDHZpc2libGVmaWVsZB8DAgJkZAITDw8WBh8FBQtoaWRkZW5maWVsZB8DAgIfAGhkZAIXDw8WBB8FBQtoaWRkZW5maWVsZB8DAgJkZAIZDw8WBh8EZR8FBQx2aXNpYmxlZmllbGQfAwICZGQCGw8PFgYfBQULaGlkZGVuZmllbGQfAwICHwBoZGQCHw8PFgQfBQULaGlkZGVuZmllbGQfAwICZGQCIQ8PFgYfBGUfBQUMdmlzaWJsZWZpZWxkHwMCAmRkAiMPDxYGHwUFC2hpZGRlbmZpZWxkHwMCAh8AaGRkAg0PDxYCHwBoZBYEAgEPDxYCHwQFCzE3MDMwMTQyODA5ZGQCAw8PFgIfBAUZMTMg0LjRjtC70Y8gMjAxNSDQs9C+0LTQsGRkAgcPD2QPEBYBZhYBFgIeDlBhcmFtZXRlclZhbHVlZBYBAgNkZAIJDw9kDxAWAWYWARYCHwZkFgECA2RkAgsPD2QPEBYBZhYBFgIfBmQWAQIDZGQCDQ8PZA8QFgJmAgEWAhYCHwZkFgIfBmQWAgIDAgNkZAIPDw9kDxAWAWYWARYCHwZkFgECA2RkAhEPD2QPEBYBZhYBFgIfBmQWAQIDZGQCEw8PZA8QFgJmAgEWAhYCHwZkFgIfBmQWAgIDAgNkZAIVDw9kDxAWAmYCARYCFgIfBmQWAh8GZBYCAgMCA2RkAhcPD2QPEBYBZhYBFgIfBmQWAQIDZGQCAQ9kFgJmD2QWBAIBD2QWDAIBD2QWJAITDw8WAh8AZ2RkAhkPDxYEHwQFNNCY0LLQsNC90L7QsiDQkNC70LXQutGB0LDQvdC00YAg0JDQu9C10LrRgdC10LXQstC40YcfAGdkZAIbDw8WAh8AZ2RkAiEPDxYCHwQFItCQ0LTRgNC10YEg0YDQtdCz0LjRgdGC0YDQsNGG0LjQuDpkZAIjDw8WAh8EBTUyMjAwMzAg0LMuINCc0LjQvdGB0LosINCt0L3Qs9C10LvRjNGB0LAg0YPQu9C40YbQsCwgNmRkAikPDxYCHwQFQyDQnNC40L3RgdC6LCDQm9C10L7QvdC40LTQsCDQkdC10LTRiyDQo9C70LjRhtCwLCDQtC4gNDUgLCDQutCyLiA1MzZkZAIxDw8WAh8EBTHQkNC00YDQtdGBINC00LvRjyDQutC+0YDRgNC10YHQv9C+0L3QtNC10L3RhtC40Lg6ZGQCMw8PFgIfBAVDMjIwMTIzLCDQsy4g0JzQuNC90YHQuiwg0KHRgtCw0YDQvtCy0LjQu9C10L3RgdC60LDRjyDRg9C70LjRhtCwLCA4N2RkAjkPDxYCHwQFQyDQnNC40L3RgdC6LCDQm9C10L7QvdC40LTQsCDQkdC10LTRiyDQo9C70LjRhtCwLCDQtC4gNDUgLCDQutCyLiA1MzZkZAJDDw8WAh8AZ2RkAkUPDxYEHwQFCU1QMjg5MTg2MR8AZ2RkAksPDxYCHwBnZGQCTQ8PFgQfBAVH0J/QsNGA0YLQuNC30LDQvdGB0LrQuNC8INCg0KPQktCUINCzLiDQnNC40L3RgdC60LAgMTYsMDksMjAwOTI5LzA0LzIwMTEfAGdkZAJTDw8WAh8AZ2RkAlUPDxYEHwQFDjMyMTAzODZBMDA4UEIzHwBnZGQCXQ8PFgIfBAUd0KDQo9CfICLQkdC10LvRgtC10LvQtdC60L7QvCJkZAJjD2QWBAIBDzwrAAkBAA8WBB4IRGF0YUtleXMWAB4LXyFJdGVtQ291bnQCAWQWAmYPZBYKAgMPZBYCZg8VARxCWTQwQUtCQjMwMTIzNjUzMjAxMjM1NTAwMDAwZAIHD2QWAmYPFQFE0KbQkdCjIOKEljUyOSDQntCQ0J4gItCQ0KHQkSDQkdC10LvQsNGA0YPRgdCx0LDQvdC6Iiwg0LMuINCc0LjQvdGB0LpkAg8PZBYCZg8VARRBS0JCQlkyWCAgICAgICAgICAgIGQCEw9kFgJmDxUBDDM3Mzc2NjA4NTAwMmQCFw9kFgJmDxUBCzEwMjMwMjc5NyAgZAIDDxBkZBYAZAJlDzwrAAkBAA8WBB8HFgAfCAL/////D2RkAgkPDxYCHwQFsAHQktC10LTRg9GJ0LjQuSDRgdC/0LXRhtC40LDQu9C40YHRgiDQv9C+INC/0YDQvtC00LDQttC1ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRkAhMPDxYCHwQFddC00L7QstC10YDQtdC90L3QvtGB0YLQuCDihJYgMTc1INC+0YIgMjAuMDEuMjAxN9CzLiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRkAiMPDxYCHwQFLNCa0YPQt9GM0LzQuNGHINCY0YDQuNC90LAg0KDRg9Cy0LjQvNC+0LLQvdCwZGQCKQ8PFgIfBAU00JjQstCw0L3QvtCyINCQ0LvQtdC60YHQsNC90LTRgCDQkNC70LXQutGB0LXQtdCy0LjRh2RkAjMPDxYCHwQFfMKrJm5ic3A7Jm5ic3A7MTMmbmJzcDsmbmJzcDvCuyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwO9C40Y7Qu9GPJm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7MjAxNSZuYnNwOyDQsy5kZAIDD2QWCAIFDw8WAh8EBUMyMjAxMjMsINCzLiDQnNC40L3RgdC6LCDQodGC0LDRgNC+0LLQuNC70LXQvdGB0LrQsNGPINGD0LvQuNGG0LAsIDg3ZGQCDQ8PFgIfBAVW0KLQtdC7OiAoMDE3KSAyMDAtMzQtOTgg0KTQsNC60YE6ICgwMTcpIDI4NC0yOS02OTxiciAvPmUtbWFpbDogdXB1MUBtZ3RzLmJlbHRlbGVjb20uYnlkZAIPD2QWCgIBDzwrABEDAA8WBB4LXyFEYXRhQm91bmRnHwgCAWQBEBYAFgAWAAwUKwAAFgJmD2QWBmYPDxYCHwBoZGQCAQ9kFgRmD2QWAgIBDw8WAh8EBTfQodC70YPQttCx0LAg0YLQtdGF0L3QuNGH0LXRgdC60L7QuSDQv9C+0LTQtNC10YDQttC60Lg6ZGQCAQ9kFgICAQ8PFgIfBAUL0YLQtdC7LiAxMjNkZAICDw8WAh8AaGRkAgMPD2QPEBYDZgIBAgIWAxYCHwZkFgIfBmQWAh8GZBYDAgMCAwIDZGQCBQ8PFgIfBAUCMTZkZAIHDw8WAh8EBQI5NGRkAgkPDxYCHwQFAjE1ZGQCEw8PFgIfBAVR0JrRg9C30YzQvNC40Ycg0JjRgNC40L3QsCDQoNGD0LLQuNC80L7QstC90LAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZGQCAg8QDxYCHwBoZGQWAQIBZAIDDw9kDxAWAWYWARYCHwYFCDE0NjYyMjE4FgECBWRkAgQPD2QPEBYBZhYBFgIfBgUIMTQ2NjIyMTgWAQIFZGQCBQ8PZA8QFgFmFgEWAh8GBQc3NDEwNDQ4FgECBWRkAgYPD2QPEBYBZhYBFgIfBgUIMTQ2NjIyMTgWAQIFZGQCBw8PZA8QFgFmFgEWAh8GBQgxNDY2MjIxOBYBAgVkZAIIDw9kDxAWAWYWARYEHgxEZWZhdWx0VmFsdWUFATkfBmQWAQIDZGQCCQ8PZA8QFgFmFgEWAh8GZBYBAgVkZAIKDw9kDxAWAWYWARYEHwoFCDE0NjYyMjE4HwZkFgECA2RkGAEFKmN0bDAyJFVjU2VydmljZUNvbnRhY3RzRGVwc2VsbDEkR1ZfRGVsc2VsbA88KwAMAQgCAWSJMMMyZ4kmYwZxNEafNLrXicB5A6+YkL1SWReQr8t2JA==" style="font-size: 10.9998pt;">
+                </div>
+
+                <div style="font-size: 13.4998pt;">
+                    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4BCD28BD" style="font-size: 10.9998pt;">
+                </div>
+
+                <!--Footer реквизиты--> 
+                <div style="font-size: 13.4998pt;">
+                    <table width="100%" style="font-size: 13.9998pt;">
+                        <tbody style="font-size: 14.4997pt;">
+                            <tr style="font-size: 14.9997pt;">
+                                <td align="left" style="font-size: 15.4996pt;">
+                                    <style type="text/css" style="font-size: 15.9996pt;">
+                                        .hiddenfield
+                                        {
+                                        display:none;
+                                        }
+                                        .visiblefield
+                                        {
+                                        display:inline;
+                                        }
+                                    </style>
+                                    <div id="ctl01_RusPanel" style="font-size: 15.9996pt;">
+                                        <table width="100%" style="font-size: 16.4995pt;">
+                                            <tbody style="font-size: 16.9995pt;">
+                                                <tr style="font-size: 17.4994pt;">
+                                                    <td align="left" style="font-size: 17.9994pt;">
+                                                        <div id="ctl01_PnApplication" style="font-size: 18.4993pt;">
+                                                            <table width="100%" style="font-size: 18.9993pt;">
+                                                                <tbody style="font-size: 19.4992pt;">
+                                                                    <tr style="font-size: 19.9992pt;">
+                                                                        <td style="font-size: 20.4991pt;"></td>
+                                                                    </tr>
+                                                                    <tr style="font-size: 19.9992pt;">
+                                                                        <td align="left" style="font-size: 9.99994pt;">
+                                                                            <strong style="font-size: 10.4999pt;">Приложение&nbsp;
+                                                                            <span id="ctl01_lbNameApplication" style="text-decoration: none; font-size: 10.9998pt;">об оказании услуги «Доступ к сети Интернет (byfly)»<br style="font-size: 11.4998pt;"></span>
+                                                                            №
+                                                                            <span id="ctl01_lbNumApplication" style="text-decoration: underline; font-size: 10.9998pt;">1703014280902</span>
+                                                                            &nbsp; от&nbsp;
+                                                                            <span id="ctl01_lbDateSign" style="text-decoration: underline; font-size: 10.9998pt;">13 июля 2015 года</span>
+                                                                            </strong>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr style="font-size: 17.4994pt;">
+                                                    <td align="left" style="font-size: 17.9994pt;">
+                                                    </td>
+                                                </tr>
+                                                <tr style="font-size: 17.4994pt;">
+                                                    <td align="left" style="font-size: 17.9994pt;">
+                                                    </td>
+                                                </tr>
+                                                <tr style="font-size: 17.4994pt;">
+                                                    <td align="left" style="font-size: 17.9994pt;">
+                                                        <div id="ctl01_PnAppText" style="font-size: 18.4993pt;">
+                                                            <table width="100%" style="font-size: 18.9993pt;">
+                                                                <tbody style="font-size: 19.4992pt;">
+                                                                    <tr style="font-size: 19.9992pt;">
+                                                                        <td align="left" style="font-size: 9.99994pt;">
+                                                                            Настоящее Приложение является составной частью 
+                                                                            Договора об оказании&nbsp; услуг&nbsp; электросвязи&nbsp; №
+                                                                            <span id="ctl01_lbNumEdContract" style="font-size: 10.4999pt;">17030142809</span>
+                                                                            &nbsp;от
+                                                                            <span id="ctl01_lbDateEdContract" style="font-size: 10.4999pt;">13 июля 2015 года</span>
+                                                                            .
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <span id="ctl01_lError" style="color: rgb(204, 51, 0); font-weight: bold; font-size: 15.9996pt;"></span>
+                                </td>
+                            </tr>
+                            <tr style="font-size: 14.9997pt;">
+                                <td align="left" class="topstyle" style="font-size: 15.4996pt;"> 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table border="0" cellpadding="1" cellspacing="1" id="table15" width="100%" style="font-size: 13.9998pt;">
+                        <tbody style="vertical-align: text-top; font-size: 14.4997pt;">
+                            <tr style="font-size: 14.9997pt;">
+                                <td style="font-size: 15.4996pt;">
+                                    <span style="font-size: 7.74994pt;"><u style="font-size: 8.24989pt;"><strong style="font-size: 8.74984pt;">1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong><span style="font-size: 12.9999pt;">&nbsp;&nbsp; </span><strong style="font-size: 8.74984pt;">Услуги широкополосного доступа в сеть Интернет. </strong></u></span>
+                                </td>
+                            </tr>
+                            <tr style="font-size: 14.9997pt;">
+                                <td style="font-size: 15.4996pt;">
+                                    <table border="0" cellpadding="1" cellspacing="1" id="table9" width="100%" style="font-size: 15.9996pt;">
+                                        <tbody style="font-size: 16.4995pt;">
+                                            <tr style="font-size: 16.9995pt;">
+                                                <td align="left" style="font-size: 17.4994pt;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="vertical-align: top; font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">1.1</span>
+                                                </td>
+                                                <td style="font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">Оператор обязуется предоставлять Абоненту услугу широкополосного доступа в сеть Интернет (далее – Услугу), а Абонент обязуется своевременно оплачивать оказываемую ему Услугу в соответствии с настоящим Приложением.</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr style="font-size: 14.9997pt;">
+                                <td style="height: 7px; font-size: 15.4996pt;">
+                                    <span style="font-size: 7.74994pt;"><u style="font-size: 8.24989pt;"><strong style="font-size: 8.74984pt;">2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Условия оказания услуг.&nbsp;</strong></u></span>
+                                </td>
+                            </tr>
+                            <tr style="font-size: 14.9997pt;">
+                                <td style="font-size: 15.4996pt;">
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <tr style="font-size: 14.9997pt;">
+                                <td style="font-size: 15.4996pt;">
+                                    <table border="0" cellpadding="1" cellspacing="1" id="table10" width="100%" style="font-size: 15.9996pt;">
+                                        <tbody style="font-size: 16.4995pt;">
+                                            <tr style="font-size: 16.9995pt;">
+                                                <td align="left" style="font-size: 17.4994pt;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="vertical-align: top; font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">2.1</span>
+                                                </td>
+                                                <td style="font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">Оператор активирует Услугу после подписания настоящего Приложения с даты, указанной в бланке заказа. Дата активации указывается в бланке заказа, который является неотъемлемой частью настоящего Приложения.</span>
+                                                </td>
+                                            </tr>
+                                            <tr style="font-size: 16.9995pt;">
+                                                <td align="left" style="font-size: 17.4994pt;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="vertical-align: top; font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">2.2</span>
+                                                </td>
+                                                <td style="font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">Абоненту, при необходимости, передается на срок действия настоящего Приложения комплект оборудования (далее – Имущество) согласно «Акту приема-передачи имущества». Дополнительная плата за Имущество не взимается.</span>
+                                                </td>
+                                            </tr>
+                                            <tr style="font-size: 16.9995pt;">
+                                                <td align="left" style="font-size: 17.4994pt;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="vertical-align: top; font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">2.3</span>
+                                                </td>
+                                                <td style="font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">Оператор обязан:</span>
+                                                    <ul style="font-size: 17.9994pt;">
+                                                        <li style="font-size: 18.4993pt;">
+                                                            <span style="font-size: 7.74994pt;">размещать информацию о планируемых профилактических и ремонтных работах, которые могут явиться причиной временных неполадок в предоставлении Услуги, на сайте по адресу <a href="http://www.byfly.by/" style="font-size: 8.24989pt;">www.byfly.by</a>;</span>
+                                                        </li>
+                                                        <li style="font-size: 18.4993pt;">
+                                                            <span style="font-size: 7.74994pt;">принимать от Абонента заявки о сбоях в работе Услуги. Заявки принимаются службой технической поддержки по телефону 123.</span>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr style="font-size: 16.9995pt;">
+                                                <td align="left" style="font-size: 17.4994pt;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="vertical-align: top; font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">2.4</span>
+                                                </td>
+                                                <td style="font-size: 17.4994pt;">
+                                                    <p style="margin-left: 21.6pt; font-size: 17.9994pt;">
+                                                        <span style="font-size: 7.74994pt;">Абонент обязан:</span>
+                                                    </p>
+                                                    <ul style="font-size: 17.9994pt;">
+                                                        <li style="font-size: 18.4993pt;">
+                                                            <span style="font-size: 7.74994pt;">выполнять все условия и процедуры предоставления Услуги, изложенные в настоящем Приложении;</span>
+                                                        </li>
+                                                        <li style="font-size: 18.4993pt;">
+                                                            <span style="font-size: 7.74994pt;">иметь навыки работы с ПЭВМ для пользования Услугой;</span>
+                                                        </li>
+                                                        <li style="font-size: 18.4993pt;">
+                                                            <span style="font-size: 7.74994pt;">в случае прекращения предоставления Услуги по причинам, не зависящим от Абонента, немедленно уведомлять службу технической поддержки Оператора;</span>
+                                                        </li>
+                                                        <li style="font-size: 18.4993pt;">
+                                                            <span style="font-size: 7.74994pt;">выполнять нормы пользования услугами сети передачи данных и доступа в сеть Интернет, размещенные на сайте <a href="http://www.byfly.by/" style="font-size: 8.24989pt;">www.byfly.by</a>;</span>
+                                                        </li>
+                                                        <li style="font-size: 18.4993pt;">
+                                                            <span style="font-size: 7.74994pt;">ознакомиться с документом «Порядок оказания услуг доступа к сети Интернет (byfly<sup style="font-size: 7.04164pt;">тм</sup>)», размещенном на сайте <a href="http://www.byfly.by/" style="font-size: 8.24989pt;">www.byfly.by</a>;</span>
+                                                        </li>
+                                                        <li style="font-size: 18.4993pt;">
+                                                            <span style="font-size: 7.74994pt;">использовать только сертифицированное в Национальной системе подтверждения соответствия Республики Беларусь Имущество;</span>
+                                                        </li>
+                                                        <li style="font-size: 18.4993pt;">
+                                                            <span style="font-size: 7.74994pt;">использовать Имущество в соответствии с назначением, поддерживать в исправном состоянии, нести материальную ответственность за сохранность Имущества, компенсировать в соответствии с законодательством причиненный ущерб в случае утери или повреждений Имущества;</span>
+                                                        </li>
+                                                        <li style="font-size: 18.4993pt;">
+                                                            <span style="font-size: 7.74994pt;">нести ответственность за настройку и работоспособность собственного оборудования и устройств;</span>
+                                                        </li>
+                                                        <li style="font-size: 18.4993pt;">
+                                                            <span style="font-size: 7.74994pt;">не передавать Имущество, принадлежащее Оператору, для ремонта или эксплуатации третьим лицам;</span>
+                                                        </li>
+                                                        <li style="font-size: 18.4993pt;">
+                                                            <span style="font-size: 7.74994pt;">предоставлять Имущество Оператору для проведения плановых инвентаризаций;</span>
+                                                        </li>
+                                                        <li style="font-size: 18.4993pt;">
+                                                            <span style="font-size: 7.74994pt;">перед началом работы включать Имущество (модем), и после окончания его выключать для корректного считывания информации о времени пользования услугой;</span>
+                                                        </li>
+                                                        <li style="font-size: 18.4993pt;">
+                                                            <span style="font-size: 7.74994pt;">для обеспечения конфиденциальности заменить выданный пароль доступа в сеть Интернет и стандартный пароль в настройках Имущества (модема) после первоначального подключения и выхода в сеть Интернет. В дальнейшем следить за состоянием настроек оконечного оборудования, периодически изменять их и сохранять в тайне;</span>
+                                                        </li>
+                                                        <li style="font-size: 18.4993pt;">
+                                                            <span style="font-size: 7.74994pt;">самостоятельно принимать решение об использовании технологии Wi-Fi для выхода в сеть Интернет, если полученное Имущество, либо собственное оборудование поддерживает технологию Wi-Fi, а также нести ответственность за настройку безопасности соединения по технологии Wi-Fi.</span>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr style="font-size: 16.9995pt;">
+                                                <td align="left" style="font-size: 17.4994pt;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="vertical-align: top; font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">2.5</span>
+                                                </td>
+                                                <td style="font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">Нарушение Абонентом обязательств п.2.4 является основанием для Оператора ограничить или полностью прекратить доступ к Услуге, а по усмотрению Оператора и полностью отказаться от исполнения Приложения в одностороннем порядке, и расторгнуть его.</span>
+                                                </td>
+                                            </tr>
+                                            <tr style="font-size: 16.9995pt;">
+                                                <td align="left" style="font-size: 17.4994pt;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="vertical-align: top; font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">2.6</span>
+                                                </td>
+                                                <td style="font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">Оператор имеет право по собственной инициативе периодически информировать Абонента о существующих и новых услугах Оператора посредством телефонной, телексной, факсимильной электросвязи, электронной почты и почтовой связи.</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr style="font-size: 14.9997pt;">
+                                <td style="font-size: 15.4996pt;">
+                                    <span style="font-size: 7.74994pt;"><u style="font-size: 8.24989pt;"><strong style="font-size: 8.74984pt;">3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Порядок расчетов .&nbsp; </strong></u></span>
+                                </td>
+                            </tr>
+                            <tr style="font-size: 14.9997pt;">
+                                <td style="font-size: 15.4996pt;">
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <tr style="font-size: 14.9997pt;">
+                                <td style="font-size: 15.4996pt;">
+                                    <table border="0" cellpadding="1" cellspacing="1" id="table10" width="100%" style="font-size: 15.9996pt;">
+                                        <tbody style="font-size: 16.4995pt;">
+                                            <tr style="font-size: 16.9995pt;">
+                                                <td align="left" style="font-size: 17.4994pt;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="vertical-align: top; font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">3.1</span>
+                                                </td>
+                                                <td style="font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">Оплата Услуги, предоставляемой Абоненту, производится в виде списания средств с лицевого счёта Абонента, созданного в расчётной системе Оператора, по утвержденным действующим тарифам на Услугу, начиная с «даты начала предоставления услуги», указанной в Бланке заказа.</span>
+                                                </td>
+                                            </tr>
+                                            <tr style="font-size: 16.9995pt;">
+                                                <td align="left" style="font-size: 17.4994pt;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="vertical-align: top; font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">3.2</span>
+                                                </td>
+                                                <td style="font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">Абонент перечисляет на лицевой счёт Оператора средства в авансовом порядке и самостоятельно контролирует наличие положительного остатка денежных средств для оплаты оказанной Услуги.</span>
+                                                </td>
+                                            </tr>
+                                            <tr style="font-size: 16.9995pt;">
+                                                <td align="left" style="font-size: 17.4994pt;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="vertical-align: top; font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">3.3</span>
+                                                </td>
+                                                <td style="font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">В случае если на лицевом счёте Абонента недостаточно средств для оплаты оказанного объёма Услуги, Оператор временно прекращает предоставление Услуги.</span>
+                                                </td>
+                                            </tr>
+                                            <tr style="font-size: 16.9995pt;">
+                                                <td align="left" style="font-size: 17.4994pt;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="vertical-align: top; font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">3.4</span>
+                                                </td>
+                                                <td style="font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">В случае, когда временно прекращен доступ Абонента к Услуге по причине израсходования средств на лицевом счете Абонента, оплата за Услугу продолжает начисляться до конца отчётного месяца. Со следующего отчётного месяца оплата за Услугу не начисляется.</span>
+                                                </td>
+                                            </tr>
+                                            <tr style="font-size: 16.9995pt;">
+                                                <td align="left" style="font-size: 17.4994pt;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="vertical-align: top; font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">3.5</span>
+                                                </td>
+                                                <td style="font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">С момента временного отключения Абонента согласно п. 3.3 настоящего Приложения до окончания отчётного месяца обратное включение Услуги в работу производится после пополнения Абонентом лицевого счёта в размере, достаточном для погашения образовавшейся задолженности и достижения положительного остатка на лицевом счёте.</span>
+                                                </td>
+                                            </tr>
+                                            <tr style="font-size: 16.9995pt;">
+                                                <td align="left" style="font-size: 17.4994pt;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="vertical-align: top; font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">3.6</span>
+                                                </td>
+                                                <td style="font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">По письменному заявлению Абонента, при наличии положительного остатка на лицевом счёте, Оператор может производить блокировку доступа Абонента к Услуге без оплаты не более 2 раз в текущем году на срок от 15 до 30 дней, но не более 30 дней в сумме.</span>
+                                                </td>
+                                            </tr>
+                                            <tr style="font-size: 16.9995pt;">
+                                                <td align="left" style="font-size: 17.4994pt;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="vertical-align: top; font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">3.7</span>
+                                                </td>
+                                                <td style="font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">Оператор имеет право производить изменение тарифов и других условий предоставления Услуги. Информация о действующих тарифах размещается на сайте <a href="http://www.byfly.by/" style="font-size: 8.24989pt;">www.byfly.by</a>, в том числе порядок списания денежных средств. Дополнительные сведения об условиях оказания Услуги, отражаются в документе "Порядок оказания услуг доступа к сети Интернет", размещенном на сайте <a href="http://www.byfly.by/" style="font-size: 8.24989pt;">www.byfly.by</a>.</span>
+                                                </td>
+                                            </tr>
+                                            <tr style="font-size: 16.9995pt;">
+                                                <td align="left" style="font-size: 17.4994pt;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="vertical-align: top; font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">3.8</span>
+                                                </td>
+                                                <td style="font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">Оператор может информировать Абонента об уменьшении остатка средств на лицевом счете по адресу электронной почты, указанному в Бланке заказа.</span>
+                                                </td>
+                                            </tr>
+                                            <tr style="font-size: 16.9995pt;">
+                                                <td align="left" style="font-size: 17.4994pt;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="vertical-align: top; font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">3.9</span>
+                                                </td>
+                                                <td style="font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">Абонент имеет возможность самостоятельно контролировать состояние лицевого счёта в "кабинете пользователя", доступном по адресу: <a href="http://www.byfly.by/" style="font-size: 8.24989pt;">www.byfly.by</a>.</span>
+                                                </td>
+                                            </tr>
+                                            <tr style="font-size: 16.9995pt;">
+                                                <td align="left" style="font-size: 17.4994pt;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="vertical-align: top; font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">3.10</span>
+                                                </td>
+                                                <td style="font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">При расторжении настоящего Приложения по согласию сторон, Абонент обязан возвратить Оператору Имущество по «Акту возврата имущества» в случае расторжения настоящего Приложения и производится окончательный расчёт за оказанную Услугу.</span>
+                                                </td>
+                                            </tr>
+                                            <tr style="font-size: 16.9995pt;">
+                                                <td align="left" style="font-size: 17.4994pt;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="vertical-align: top; font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">3.11</span>
+                                                </td>
+                                                <td style="font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;">При расторжении настоящего Приложения по инициативе Оператора Абонент обязан в течение 10 банковских дней с момента окончания срока действия настоящего Приложения погасить задолженность за Услугу и в течение пяти рабочих дней вернуть Оператору переданное Имущество.</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr style="font-size: 14.9997pt;">
+                                <td style="font-size: 15.4996pt;">
+                                    <span style="font-size: 7.74994pt;"><u style="font-size: 8.24989pt;"><strong style="font-size: 8.74984pt;">4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Ответственность.&nbsp;</strong></u></span>
+                                </td>
+                            </tr>
+                            <tr style="font-size: 14.9997pt;">
+                                <td style="font-size: 15.4996pt;">
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <tr style="font-size: 14.9997pt;">
+                                <td style="font-size: 15.4996pt;">
+                                    <table border="0" cellpadding="1" cellspacing="1" id="table11" width="100%" style="font-size: 15.9996pt;">
+                                        <tbody style="font-size: 16.4995pt;">
+                                            <tr style="font-size: 16.9995pt;">
+                                                <td colspan="3" style="font-size: 17.4994pt;">
+                                                    <table border="0" cellpadding="1" cellspacing="1" id="table6" width="100%" style="font-size: 17.9994pt;">
+                                                        <tbody style="font-size: 18.4993pt;">
+                                                            <tr style="font-size: 18.9993pt;">
+                                                                <td align="left" style="font-size: 19.4992pt;">
+                                                                    &nbsp;
+                                                                </td>
+                                                                <td align="left" style="vertical-align: top; font-size: 19.4992pt;">
+                                                                    <span style="font-size: 7.74994pt;">4.1</span>
+                                                                </td>
+                                                                <td style="font-size: 19.4992pt;">
+                                                                    <span style="font-size: 7.74994pt;">Каждая из сторон несет ответственность за причиненный другой стороне ущерб, подтвержденный документальными доказательствами, возникший вследствие невыполнения или ненадлежащего выполнения одной из сторон обязательств по настоящему Приложению.</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr style="font-size: 18.9993pt;">
+                                                                <td align="left" style="font-size: 19.4992pt;">
+                                                                    &nbsp;
+                                                                </td>
+                                                                <td align="left" style="vertical-align: top; font-size: 19.4992pt;">
+                                                                    <span style="font-size: 7.74994pt;">4.2</span>
+                                                                </td>
+                                                                <td style="font-size: 19.4992pt;">
+                                                                    <span style="font-size: 7.74994pt;">Оператор не несет имущественной ответственности, если неисполнение или ненадлежащее исполнение имело место вследствие обстоятельств непреодолимой силы или из-за нарушения Абонентом требований действующего законодательства Республики Беларусь, настоящего Приложения и (или) Правил пользования услугами сети передачи данных и доступа в сеть Интернет.</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr style="font-size: 18.9993pt;">
+                                                                <td align="left" style="font-size: 19.4992pt;">
+                                                                    &nbsp;
+                                                                </td>
+                                                                <td align="left" style="vertical-align: top; font-size: 19.4992pt;">
+                                                                    <span style="font-size: 7.74994pt;">4.3</span>
+                                                                </td>
+                                                                <td style="font-size: 19.4992pt;">
+                                                                    <span style="font-size: 7.74994pt;">Оператор не несет ответственности перед Абонентом в случае, если информация о логине и пароле доступа в сеть Интернет и пароле Имущества (модема) стала известна третьим лицам (вне зависимости от обстоятельств получения третьими лицами такой информации) и в результате этого от имени Абонента была получена Услуга по настоящему Приложению. Оплата Услуги производится Абонентом без права требования от Оператора какой-либо компенсации.</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr style="font-size: 18.9993pt;">
+                                                                <td align="left" style="font-size: 19.4992pt;">
+                                                                    &nbsp;
+                                                                </td>
+                                                                <td align="left" style="vertical-align: top; font-size: 19.4992pt;">
+                                                                    <span style="font-size: 7.74994pt;">4.4</span>
+                                                                </td>
+                                                                <td style="font-size: 19.4992pt;">
+                                                                    <span style="font-size: 7.74994pt;">Оператор не возмещает возможный прямой или косвенный ущерб, причиненный третьим лицам или Абоненту в результате использования последним сети Интернет, в том числе ущерб (убытки и т.д.), причиненный Абоненту третьими лицами, в связи с исполнением/ неисполнением договорных обязательств между ними, а также ущерб, вызванный простоем оборудования или использованием Абонентом нелицензионного программного обеспечения, действиями компьютерных вирусов и прочих вредоносных программ.</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr style="font-size: 18.9993pt;">
+                                                                <td align="left" style="font-size: 19.4992pt;">
+                                                                    &nbsp;
+                                                                </td>
+                                                                <td align="left" style="vertical-align: top; font-size: 19.4992pt;">
+                                                                    <span style="font-size: 7.74994pt;">4.5</span>
+                                                                </td>
+                                                                <td style="font-size: 19.4992pt;">
+                                                                    <span style="font-size: 7.74994pt;">Оператор не несет ответственность за функционирование и доступность отдельных сегментов сети Интернет и не гарантирует возможность информационного обмена с теми узлами или серверами, которые временно или постоянно недоступны через сеть Интернет.</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr style="font-size: 18.9993pt;">
+                                                                <td align="left" style="height: 13px; font-size: 19.4992pt;">
+                                                                    &nbsp;
+                                                                </td>
+                                                                <td align="left" style="vertical-align: top; font-size: 19.4992pt;">
+                                                                    <span style="font-size: 7.74994pt;">4.6</span>
+                                                                </td>
+                                                                <td style="height: 13px; font-size: 19.4992pt;">
+                                                                    <span style="font-size: 7.74994pt;">Стороны не несут ответственности за ненадлежащее исполнение обязательств по настоящему Приложению вследствие принятия полномочными органами нормативных актов, препятствующих исполнению обязательств по настоящему Приложению.</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr style="font-size: 18.9993pt;">
+                                                                <td align="left" style="font-size: 19.4992pt;">
+                                                                    &nbsp;
+                                                                </td>
+                                                                <td align="left" style="vertical-align: top; font-size: 19.4992pt;">
+                                                                    <span style="font-size: 7.74994pt;">4.7</span>
+                                                                </td>
+                                                                <td style="font-size: 19.4992pt;">
+                                                                    <span style="font-size: 7.74994pt;">При неоплате задолженности за Услугу в срок, указанный в п. 3.11 настоящего Приложения, Абонент оплачивает Оператору пеню в размере 0,15% от несвоевременно оплаченной суммы за каждый день просрочки. Если по истечении пяти рабочих дней после расторжения настоящего Приложения Абонент не вернёт Имущество, то Оператор выставляет пеню в размере 3% базовой величины за каждый день просрочки.</span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr style="font-size: 16.9995pt;">
+                                                <td style="font-size: 17.4994pt;">
+                                                    <span style="font-size: 7.74994pt;"><u style="font-size: 8.24989pt;"><strong style="font-size: 8.74984pt;">5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Срок действия Приложения.&nbsp;</strong></u></span>
+                                                </td>
+                                            </tr>
+                                            <tr style="font-size: 16.9995pt;">
+                                                <td style="font-size: 17.4994pt;">
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr style="font-size: 16.9995pt;">
+                                                <td style="font-size: 17.4994pt;">
+                                                    <table border="0" cellpadding="1" cellspacing="1" id="table24" width="100%" style="font-size: 17.9994pt;">
+                                                        <tbody style="font-size: 18.4993pt;">
+                                                            <tr style="font-size: 18.9993pt;">
+                                                                <td colspan="3" style="font-size: 19.4992pt;">
+                                                                    <table border="0" cellpadding="1" cellspacing="1" id="table25" width="100%" style="font-size: 19.9992pt;">
+                                                                        <tbody style="font-size: 20.4991pt;">
+                                                                            <tr style="font-size: 20.9991pt;">
+                                                                                <td align="left" style="font-size: 21.499pt;">
+                                                                                    &nbsp;
+                                                                                </td>
+                                                                                <td align="left" style="vertical-align: top; font-size: 21.499pt;">
+                                                                                    <span style="font-size: 7.74994pt;">5.1</span>
+                                                                                </td>
+                                                                                <td style="font-size: 21.499pt;">
+                                                                                    <span style="font-size: 7.74994pt;">Настоящее Приложение вступает в силу с момента его подписания обеими сторонами и распространяет своё действие на неопределённый срок.</span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr style="font-size: 20.9991pt;">
+                                                                                <td align="left" style="font-size: 21.499pt;">
+                                                                                    &nbsp;
+                                                                                </td>
+                                                                                <td align="left" style="vertical-align: top; font-size: 21.499pt;">
+                                                                                    <span style="font-size: 7.74994pt;">5.2</span>
+                                                                                </td>
+                                                                                <td style="font-size: 21.499pt;">
+                                                                                    <span style="font-size: 7.74994pt;">Настоящее Приложение может быть расторгнуто по требованию одной из сторон с уведомлением об этом другой стороны письменно за 30 дней до дня расторжения.</span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr style="font-size: 20.9991pt;">
+                                                                                <td align="left" style="font-size: 21.499pt;">
+                                                                                    &nbsp;
+                                                                                </td>
+                                                                                <td align="left" style="vertical-align: top; font-size: 21.499pt;">
+                                                                                    <span style="font-size: 7.74994pt;">5.3</span>
+                                                                                </td>
+                                                                                <td style="font-size: 21.499pt;">
+                                                                                    <span style="font-size: 7.74994pt;">Настоящее Приложение может быть расторгнуто по инициативе Оператора в случае закрытия оказываемой Услуги с уведомлением об этом Абонента письменно за 30 дней до предполагаемой даты расторжения.</span>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr style="font-size: 20.9991pt;">
+                                                                                <td align="left" style="font-size: 21.499pt;">
+                                                                                    &nbsp;
+                                                                                </td>
+                                                                                <td align="left" style="vertical-align: top; font-size: 21.499pt;">
+                                                                                    <span style="font-size: 7.74994pt;">5.4</span>
+                                                                                </td>
+                                                                                <td style="font-size: 21.499pt;">
+                                                                                    <span style="font-size: 7.74994pt;">Оператор имеет право расторгнуть настоящее Приложение в одностороннем порядке с письменным уведомлением Абонента об этом, если в течение месяца, следующего за месяцем временного прекращения доступа в соответствии с п. 3.3 настоящего Приложения, Абонент не погасит задолженность по оплате за Услугу.</span>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="font-size: 13.9998pt;">
+                        &nbsp;
+                    </p>
+                    <table width="100%" style="font-size: 13.9998pt;">
+                        <tbody style="font-size: 14.4997pt;">
+                            <tr style="font-size: 14.9997pt;">
+                                <td align="left" style="font-size: 8.99982pt;">
+                                    <style type="text/css" style="font-size: 9.49977pt;">
+                                        .hiddenfield
+                                        {
+                                        display:none;
+                                        }
+                                        .visiblefield
+                                        {
+                                        display:inline;
+                                        }
+                                        .style1
+                                        {
+                                        width: 47%;
+                                        }
+                                    </style>
+                                    <div id="ctl02_pMain" style="width: 100%; font-size: 9.49977pt;">
+                                        <div id="ctl02_pnInfo" style="font-size: 9.99972pt;">
+                                            <table width="100%" style="font-size: 10.4997pt;">
+                                                <tbody style="font-size: 10.9996pt;">
+                                                    <tr style="font-size: 11.4996pt;">
+                                                        <td class="style1" valign="top" style="font-size: 11.9995pt;">
+                                                            <span id="ctl02_Label9" style="font-weight: bold; text-decoration: underline; font-size: 12.4995pt;">Оператор:</span>
+                                                        </td>
+                                                        <td width="6%" style="font-size: 11.9995pt;">
+                                                        </td>
+                                                        <td width="47%" valign="top" style="font-size: 11.9995pt;">
+                                                            <span id="ctl02_Label10" style="font-weight: bold; text-decoration: underline; font-size: 12.4995pt;">Абонент: </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="font-size: 11.4996pt;">
+                                                        <td class="style1" valign="top" style="font-size: 11.9995pt;">
+                                                            <span id="ctl02_lbl_Beltelecom" style="display: inline-block; border-style: none; font-weight: bold; font-size: 12.4995pt;">РУП "Белтелеком"</span>
+                                                            <br style="font-size: 12.4995pt;">
+                                                            <span id="ctl02_lFilial" style="font-weight: bold; font-size: 12.4995pt;"></span>
+                                                            <span id="ctl02_lFilial1" style="font-weight: bold; font-size: 12.4995pt;"></span>
+                                                            <input name="ctl02$tbFilial" type="text" id="ctl02_tbFilial" class="hiddenfield" style="color: red; border-color: red; border-width: 2px; border-style: solid; font-size: 10.9998pt;">
+                                                            <br style="font-size: 12.4995pt;">
+                                                            <span id="ctl02_ldepsell" style="font-weight: bold; font-size: 12.4995pt;"></span>
+                                                            <span id="ctl02_ldepsell1" style="font-weight: bold; font-size: 12.4995pt;"></span>
+                                                            <input name="ctl02$tbdepsell" type="text" id="ctl02_tbdepsell" class="hiddenfield" style="color: red; border-color: red; border-width: 2px; border-style: solid; font-size: 10.9998pt;">
+                                                        </td>
+                                                        <td style="font-size: 11.9995pt;">
+                                                        </td>
+                                                        <td valign="top" style="font-size: 11.9995pt;">
+                                                            <span id="ctl02_lName" style="font-weight: bold; font-size: 12.4995pt;"></span>
+                                                            <input name="ctl02$tbName" type="text" id="ctl02_tbName" class="hiddenfield" style="color: red; border-color: red; border-width: 2px; border-style: solid; font-size: 10.9998pt;">
+                                                            <span id="ctl02_lAbon" style="font-weight: bold; font-size: 12.4995pt;">Иванов Александр Алексеевич</span>
+                                                            <span id="ctl02_lAbon1" style="font-weight: bold; font-size: 12.4995pt;"></span>
+                                                            <input name="ctl02$tbAbon" type="text" id="ctl02_tbAbon" class="hiddenfield" style="color: red; border-color: red; border-width: 2px; border-style: solid; font-size: 10.9998pt;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="font-size: 11.4996pt;">
+                                                        <td class="style1" valign="top" style="font-size: 11.9995pt;">
+                                                            <span id="ctl02_Label11" style="font-weight: bold; text-decoration: underline; font-size: 12.4995pt;">Юридический адрес: </span>
+                                                        </td>
+                                                        <td style="font-size: 11.9995pt;">
+                                                        </td>
+                                                        <td valign="top" style="font-size: 11.9995pt;">
+                                                            <span id="ctl02_Label44" style="font-weight: bold; text-decoration: underline; font-size: 12.4995pt;">Адрес регистрации:</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="font-size: 11.4996pt;">
+                                                        <td class="style1" valign="top" style="font-size: 11.9995pt;">
+                                                            <span id="ctl02_lAddress" style="font-size: 12.4995pt;">220030 г. Минск, Энгельса улица, 6</span>
+                                                            <span id="ctl02_lAddress1" style="font-size: 12.4995pt;"></span>
+                                                            <input name="ctl02$tbAddress" type="text" id="ctl02_tbAddress" class="hiddenfield" style="color: red; border-color: red; border-width: 2px; border-style: solid; font-size: 10.9998pt;">
+                                                        </td>
+                                                        <td style="font-size: 11.9995pt;">
+                                                        </td>
+                                                        <td valign="top" style="font-size: 11.9995pt;">
+                                                            <span id="ctl02_lAddressZ" style="font-size: 12.4995pt;"> Минск, Леонида Беды Улица, д. 45 , кв. 536</span>
+                                                            <span id="ctl02_lAddressZ1" style="font-size: 12.4995pt;"></span>
+                                                            <input name="ctl02$tbAddressZ" type="text" id="ctl02_tbAddressZ" class="hiddenfield" style="color: red; border-color: red; border-width: 2px; border-style: solid; font-size: 10.9998pt;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="font-size: 11.4996pt;">
+                                                        <td class="style1" valign="top" style="font-size: 11.9995pt;">
+                                                            <span id="ctl02_Label17" style="font-weight: bold; text-decoration: underline; font-size: 12.4995pt;">Почтовый адрес: </span>
+                                                        </td>
+                                                        <td style="font-size: 11.9995pt;">
+                                                        </td>
+                                                        <td valign="top" style="font-size: 11.9995pt;">
+                                                            <span id="ctl02_Label19" style="font-weight: bold; text-decoration: underline; font-size: 12.4995pt;">Адрес для корреспонденции:</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="font-size: 11.4996pt;">
+                                                        <td class="style1" valign="top" style="font-size: 11.9995pt;">
+                                                            <span id="ctl02_lPost" style="font-size: 12.4995pt;">220123, г. Минск, Старовиленская улица, 87</span>
+                                                            <span id="ctl02_lPost_1" style="font-size: 12.4995pt;"></span>
+                                                            <input name="ctl02$tbPost" type="text" id="ctl02_tbPost" class="hiddenfield" style="color: red; border-color: red; border-width: 2px; border-style: solid; font-size: 10.9998pt;">
+                                                        </td>
+                                                        <td style="font-size: 11.9995pt;">
+                                                        </td>
+                                                        <td valign="top" style="font-size: 11.9995pt;">
+                                                            <span id="ctl02_lPost1" style="font-size: 12.4995pt;"> Минск, Леонида Беды Улица, д. 45 , кв. 536</span>
+                                                            <span id="ctl02_lPost1_1" style="font-size: 12.4995pt;"></span>
+                                                            <input name="ctl02$tbPost1" type="text" id="ctl02_tbPost1" class="hiddenfield" style="color: red; border-color: red; border-width: 2px; border-style: solid; font-size: 10.9998pt;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="font-size: 11.4996pt;">
+                                                        <td class="style1" rowspan="2" valign="top" style="font-size: 11.9995pt;">
+                                                        </td>
+                                                        <td style="font-size: 11.9995pt;">
+                                                        </td>
+                                                        <td rowspan="2" valign="top" style="font-size: 11.9995pt;">
+                                                            <span id="ctl02_Label52" style="font-weight: bold; text-decoration: underline; font-size: 12.4995pt;">Паспорт №: </span>
+                                                            <span id="ctl02_lPas" style="font-size: 12.4995pt;">MP2891861</span>
+                                                            <span id="ctl02_Label50" style="font-weight: bold; text-decoration: underline; font-size: 12.4995pt;">Когда и кем выдан: </span>
+                                                            <span id="ctl02_lVid" style="font-size: 12.4995pt;">Партизанским РУВД г. Минска 16,09,200929/04/2011</span>
+                                                            <span id="ctl02_lVid1" style="font-size: 12.4995pt;"></span>
+                                                            <input name="ctl02$tbVid" type="text" id="ctl02_tbVid" class="hiddenfield" style="color: red; border-color: red; border-width: 2px; border-style: solid; font-size: 10.9998pt;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="font-size: 11.4996pt;">
+                                                        <td style="font-size: 11.9995pt;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="font-size: 11.4996pt;">
+                                                        <td class="style1" style="font-size: 11.9995pt;">
+                                                        </td>
+                                                        <td style="font-size: 11.9995pt;">
+                                                        </td>
+                                                        <td valign="top" style="font-size: 11.9995pt;">
+                                                            <span id="ctl02_Label46" style="font-weight: bold; text-decoration: underline; font-size: 12.4995pt;">Личный номер: </span>
+                                                            <span id="ctl02_lNum" style="font-size: 12.4995pt;">3210386A008PB3</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="font-size: 11.4996pt;">
+                                                        <td class="style1" valign="top" style="font-size: 11.9995pt;">
+                                                            <span id="ctl02_Label8" style="font-weight: bold; text-decoration: underline; font-size: 12.4995pt;">Банковские реквизиты для оплаты: </span>
+                                                        </td>
+                                                        <td style="font-size: 11.9995pt;">
+                                                        </td>
+                                                        <td valign="top" style="font-size: 11.9995pt;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="font-size: 11.4996pt;">
+                                                        <td style="font-size: 11.9995pt;">
+                                                            <span id="ctl02_Label12" style="font-size: 12.4995pt;">Получатель платежа: </span>
+                                                            <br style="font-size: 12.4995pt;">
+                                                            <span id="ctl02_lbPayee" style="font-size: 12.4995pt;">РУП "Белтелеком"</span>
+                                                            <span id="ctl02_lbPayee1" style="font-size: 12.4995pt;"></span>
+                                                            <input name="ctl02$tbPayee" type="text" id="ctl02_tbPayee" class="hiddenfield" style="color: red; border-color: red; border-width: 2px; border-style: solid; font-size: 10.9998pt;">
+                                                        </td>
+                                                        <td style="font-size: 11.9995pt;"></td>
+                                                        <td style="font-size: 11.9995pt;"></td>
+                                                    </tr>
+                                                    <tr style="font-size: 11.4996pt;">
+                                                        <td align="left" class="style1" valign="top" style="font-size: 11.9995pt;">
+                                                            <style type="text/css" style="font-size: 12.4995pt;">
+                                                                .hiddenfield
+                                                                {
+                                                                display:none;
+                                                                }
+                                                                .visiblefield
+                                                                {
+                                                                display:inline;
+                                                                }
+                                                            </style>
+                                                            <table id="ctl02_ViewContractAccount1_DataListAccount" cellspacing="0" border="0" style="width: 100%; border-collapse: collapse; font-size: 12.4995pt;">
+                                                                <tbody style="font-size: 12.9994pt;">
+                                                                    <tr style="font-size: 13.4994pt;">
+                                                                        <td style="font-size: 13.9993pt;">
+                                                                            <span id="ctl02_ViewContractAccount1_DataListAccount_ctl00_LabelAccount" style="text-decoration: underline; font-size: 14.4993pt;">Р/с:</span>
+                                                                            <span id="ctl02_ViewContractAccount1_DataListAccount_ctl00_lAccount" style="font-size: 14.4993pt;">BY40AKBB30123653201235500000</span><br style="font-size: 14.4993pt;">
+                                                                            <span id="ctl02_ViewContractAccount1_DataListAccount_ctl00_Label20" style="text-decoration: underline; font-size: 14.4993pt;">Банк:</span>
+                                                                            <span id="ctl02_ViewContractAccount1_DataListAccount_ctl00_lBank" style="font-size: 14.4993pt;">ЦБУ №529 ОАО "АСБ Беларусбанк", г. Минск</span>
+                                                                            <span id="ctl02_ViewContractAccount1_DataListAccount_ctl00_lBank1" style="font-size: 14.4993pt;"></span>
+                                                                            <strong style="font-size: 14.4993pt;">
+                                                                            <input name="ctl02$ViewContractAccount1$DataListAccount$ctl00$tbBank" type="text" id="ctl02_ViewContractAccount1_DataListAccount_ctl00_tbBank" class="hiddenfield" style="color: red; border-color: red; border-width: 2px; border-style: solid; font-size: 10.9998pt;">
+                                                                            </strong><br style="font-size: 14.4993pt;">
+                                                                            <span id="ctl02_ViewContractAccount1_DataListAccount_ctl00_LabelCodeBank" style="text-decoration: underline; font-size: 14.4993pt;">BICSWIFT:</span>
+                                                                            <span id="ctl02_ViewContractAccount1_DataListAccount_ctl00_lBank_kod" style="font-size: 14.4993pt;">AKBBBY2X            </span><!--<BR>-->
+                                                                            <br style="font-size: 14.4993pt;">
+                                                                            <span id="ctl02_ViewContractAccount1_DataListAccount_ctl00_Label7" style="font-weight: normal; text-decoration: underline; font-size: 14.4993pt;">ОКПО: </span>
+                                                                            <span id="ctl02_ViewContractAccount1_DataListAccount_ctl00_lOkpo" style="font-size: 14.4993pt;">373766085002</span>
+                                                                            <br style="font-size: 14.4993pt;">
+                                                                            <span id="ctl02_ViewContractAccount1_DataListAccount_ctl00_Label5" style="font-weight: normal; text-decoration: underline; font-size: 14.4993pt;">УНП: </span>
+                                                                            <span id="ctl02_ViewContractAccount1_DataListAccount_ctl00_lUnn" style="font-size: 14.4993pt;">102302797  </span>&nbsp;
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        <td style="font-size: 11.9995pt;">
+                                                        </td>
+                                                        <td rowspan="" valign="top" style="font-size: 11.9995pt;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="font-size: 11.4996pt;">
+                                                        <td class="style1" style="font-size: 11.9995pt;">
+                                                        </td>
+                                                        <td style="font-size: 11.9995pt;">
+                                                        </td>
+                                                        <td style="font-size: 11.9995pt;">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <table width="100%" style="font-size: 9.99972pt;">
+                                            <tbody style="font-size: 10.4997pt;">
+                                                <tr style="font-size: 10.9996pt;">
+                                                    <td colspan="2" align="center" style="font-size: 11.4996pt;">
+                                                    </td>
+                                                </tr>
+                                                <tr style="font-size: 10.9996pt;">
+                                                    <td align="left" valign="top" style="font-size: 11.4996pt;">
+                                                    </td>
+                                                    <td align="left" valign="top" style="font-size: 11.4996pt;">
+                                                    </td>
+                                                </tr>
+                                                <tr style="font-size: 10.9996pt;">
+                                                    <td colspan="2" style="font-size: 11.4996pt;">
+                                                        <table width="100%" style="font-size: 11.9995pt;">
+                                                            <tbody style="font-size: 12.4995pt;">
+                                                                <tr style="font-size: 12.9994pt;">
+                                                                    <td width="47%" height="20px" style="font-size: 13.4994pt;">
+                                                                        <span id="ctl02_lIs1" style="font-size: 13.9993pt;">Ведущий специалист по продаже                                                                                                                         </span>
+                                                                        <span id="ctl02_lIs11" style="font-size: 13.9993pt;"></span>
+                                                                        <span id="ctl02_lbComma" style="font-size: 13.9993pt;">,</span>
+                                                                        <input name="ctl02$tbIs1" type="text" id="ctl02_tbIs1" class="hiddenfield" style="color: red; border-color: red; border-width: 2px; border-style: solid; font-size: 10.9998pt;">
+                                                                        <br style="font-size: 13.9993pt;">
+                                                                        <span id="ctl02_Label59" style="font-size: 13.9993pt;"> на основании </span>
+                                                                        <span id="ctl02_lbProxy" style="font-size: 13.9993pt;">доверенности № 175 от 20.01.2017г.                                                                  </span>
+                                                                        <span id="ctl02_lbProxy1" style="font-size: 13.9993pt;"></span>
+                                                                        <input name="ctl02$tbProxy" type="text" id="ctl02_tbProxy" class="hiddenfield" style="color: red; border-color: red; border-width: 2px; border-style: solid; font-size: 10.9998pt;">
+                                                                    </td>
+                                                                    <td width="6%" height="20px" style="font-size: 13.4994pt;">
+                                                                    </td>
+                                                                    <td width="47%" height="20px" style="font-size: 13.4994pt;">
+                                                                        <span id="ctl02_lbl_post" style="font-weight: normal; font-size: 13.9993pt;"></span>
+                                                                        <span id="ctl02_lbl_post1" style="font-weight: normal; font-size: 13.9993pt;"></span>
+                                                                        <input name="ctl02$tb_post" type="text" id="ctl02_tb_post" class="hiddenfield" style="color: red; border-color: red; border-width: 2px; border-style: solid; font-size: 10.9998pt;">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="font-size: 12.9994pt;">
+                                                                    <td width="47%" style="font-size: 13.4994pt;">
+                                                                        <span id="ctl02_lIs2" style="font-size: 13.9993pt;">Кузьмич Ирина Рувимовна</span>
+                                                                        <span id="ctl02_lIs21" style="font-size: 13.9993pt;"></span>
+                                                                        <input name="ctl02$tbIs2" type="text" id="ctl02_tbIs2" class="hiddenfield" style="color: red; border-color: red; border-width: 2px; border-style: solid; font-size: 10.9998pt;">
+                                                                    </td>
+                                                                    <td width="6%" style="font-size: 13.4994pt;">
+                                                                    </td>
+                                                                    <td width="47%" style="font-size: 13.4994pt;">
+                                                                        <span id="ctl02_lAb" style="font-size: 13.9993pt;">Иванов Александр Алексеевич</span>
+                                                                        <span id="ctl02_lAb1" style="font-size: 13.9993pt;"></span>
+                                                                        <input name="ctl02$tbAb" type="text" id="ctl02_tbAb" class="hiddenfield" style="color: red; border-color: red; border-width: 2px; border-style: solid; font-size: 10.9998pt;">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="font-size: 12.9994pt;">
+                                                                    <td width="47%" style="font-size: 13.4994pt;">
+                                                                    </td>
+                                                                    <td width="6%" style="font-size: 13.4994pt;">
+                                                                    </td>
+                                                                    <td width="47%" style="font-size: 13.4994pt;">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="font-size: 12.9994pt;">
+                                                                    <td style="font-size: 13.4994pt;">
+                                                                        _________________________<em style="font-size: 13.9993pt;"><span id="ctl02_Label53" style="font-size: 14.4993pt;">(подпись)</span>
+                                                                        </em>
+                                                                    </td>
+                                                                    <td style="font-size: 13.4994pt;">
+                                                                    </td>
+                                                                    <td style="font-size: 13.4994pt;">
+                                                                        <em style="font-size: 13.9993pt;"><span id="ctl02_Label54" style="font-size: 14.4993pt;">(подпись)</span>
+                                                                        </em>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="font-size: 12.9994pt;">
+                                                                    <td align="left" style="font-size: 13.4994pt;">
+                                                                        <span id="ctl02_LabDate" style="display: inline-block; text-decoration: underline; width: 100%; font-size: 13.9993pt;">«&nbsp;&nbsp;13&nbsp;&nbsp;»&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;июля&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015&nbsp; г.</span>
+                                                                    </td>
+                                                                    <td style="font-size: 13.4994pt;">
+                                                                    </td>
+                                                                    <td style="font-size: 13.4994pt;">
+                                                                        «____»___________________20___г.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="font-size: 12.9994pt;">
+                                                                    <td align="center" height="20px" style="font-size: 13.4994pt;">
+                                                                        М. П.
+                                                                    </td>
+                                                                    <td align="center" height="20px" style="font-size: 13.4994pt;">
+                                                                    </td>
+                                                                    <td align="center" height="20px" style="font-size: 13.4994pt;">
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr style="font-size: 10.9996pt;">
+                                                    <td colspan="2" style="font-size: 11.4996pt;">
+                                                        <p style="border-bottom: 1px solid black; font-size: 11.9995pt;"></p>
+                                                    </td>
+                                                </tr>
+                                                <tr style="font-size: 10.9996pt;">
+                                                    <td colspan="2" style="font-size: 11.4996pt;">
+                                                        &nbsp;
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div id="ctl02_pnInfo2" style="font-size: 9.49977pt;">
+                                        <table id="Table1" border="0" cellpadding="1" cellspacing="1" width="100%" style="font-size: 9.99972pt;">
+                                            <tbody style="font-size: 10.4997pt;">
+                                                <tr style="font-size: 10.9996pt;">
+                                                    <td valign="top" width="50%" style="font-size: 11.4996pt;">
+                                                        <table id="Table6" border="0" cellpadding="1" cellspacing="1" width="100%" style="font-size: 8.99982pt;">
+                                                            <tbody style="font-size: 9.49977pt;">
+                                                                <tr style="font-size: 9.99972pt;">
+                                                                    <td style="font-size: 10.4997pt;">
+                                                                        <strong style="font-size: 10.9996pt;">
+                                                                        <span id="ctl02_Label55" style="font-size: 11.4996pt;">Сервисный центр/цех/участок продаж услуг РУП ''Белтелеком''</span>
+                                                                        </strong>
+                                                                        <br style="font-size: 10.9996pt;">
+                                                                        <span id="ctl02_Label58" style="font-size: 10.9996pt;">Почтовый адрес: </span>
+                                                                        <span id="ctl02_lbPostBottom" style="font-size: 10.9996pt;">220123, г. Минск, Старовиленская улица, 87</span>
+                                                                        <span id="ctl02_lbPostBottom1" style="font-size: 10.9996pt;"></span>
+                                                                        <input name="ctl02$tbPostBottom" type="text" id="ctl02_tbPostBottom" class="hiddenfield" style="color: red; border-color: red; border-width: 2px; border-style: solid; font-size: 10.9998pt;">
+                                                                        <br style="font-size: 10.9996pt;">
+                                                                        <span id="ctl02_Label56" style="font-size: 10.9996pt;">(заключение/расторжение договоров):</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="font-size: 9.99972pt;">
+                                                                    <td style="font-size: 10.4997pt;">
+                                                                        <span id="ctl02_LDepCont" style="font-size: 10.9996pt;">Тел: (017) 200-34-98 Факс: (017) 284-29-69<br style="font-size: 11.4996pt;">e-mail: upu1@mgts.beltelecom.by</span>
+                                                                        <style type="text/css" style="font-size: 10.9996pt;">
+                                                                            .hiddenfield
+                                                                            {
+                                                                            display:none;
+                                                                            }
+                                                                            .visiblefield
+                                                                            {
+                                                                            display:inline;
+                                                                            }
+                                                                        </style>
+                                                                        &nbsp;
+                                                                        <div style="font-size: 10.9996pt;">
+                                                                            <table cellspacing="0" border="0" id="ctl02_UcServiceContactsDepsell1_GV_Delsell" style="border-collapse: collapse; font-size: 11.4996pt;">
+                                                                                <tbody style="font-size: 11.9995pt;">
+                                                                                    <tr style="font-size: 12.4995pt;">
+                                                                                        <td style="font-size: 12.9994pt;">
+                                                                                            <span id="ctl02_UcServiceContactsDepsell1_GV_Delsell_ctl02_Label1" style="font-size: 13.4994pt;">Служба технической поддержки:</span>
+                                                                                            <span id="ctl02_UcServiceContactsDepsell1_GV_Delsell_ctl02_Label11" style="font-size: 13.4994pt;"></span>
+                                                                                            <input name="ctl02$UcServiceContactsDepsell1$GV_Delsell$ctl02$tbLabel1" type="text" id="ctl02_UcServiceContactsDepsell1_GV_Delsell_ctl02_tbLabel1" class="hiddenfield" style="color: red; border-color: red; border-width: 2px; border-style: solid; font-size: 10.9998pt;">
+                                                                                        </td>
+                                                                                        <td style="font-size: 12.9994pt;">
+                                                                                            <span id="ctl02_UcServiceContactsDepsell1_GV_Delsell_ctl02_Label2" style="font-size: 13.4994pt;">тел. 123</span>
+                                                                                            <span id="ctl02_UcServiceContactsDepsell1_GV_Delsell_ctl02_Label21" style="font-size: 13.4994pt;"></span>
+                                                                                            <input name="ctl02$UcServiceContactsDepsell1$GV_Delsell$ctl02$tbLabel2" type="text" id="ctl02_UcServiceContactsDepsell1_GV_Delsell_ctl02_tbLabel2" class="hiddenfield" style="color: red; border-color: red; border-width: 2px; border-style: solid; font-size: 10.9998pt;">
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="font-size: 9.99972pt;">
+                                                                    <td style="font-size: 10.4997pt;">
+                                                                        <strong style="font-size: 10.9996pt;">
+                                                                        <span id="ctl02_Label57" style="font-size: 11.4996pt;">Исполнитель:</span>
+                                                                        </strong>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="font-size: 9.99972pt;">
+                                                                    <td style="font-size: 10.4997pt;">
+                                                                        <span id="ctl02_LabUser" style="font-size: 10.9996pt;">Кузьмич Ирина Рувимовна                                     </span>
+                                                                        <span id="ctl02_LabUser1" style="font-size: 10.9996pt;"></span>
+                                                                        <input name="ctl02$tbLabUser" type="text" id="ctl02_tbLabUser" class="hiddenfield" style="color: red; border-color: red; border-width: 2px; border-style: solid; font-size: 10.9998pt;">
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td valign="top" width="50%" style="font-size: 11.4996pt;">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <br style="font-size: 9.49977pt;">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
